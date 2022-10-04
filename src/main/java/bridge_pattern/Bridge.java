@@ -86,6 +86,23 @@ class NewRemote implements Remote {
 
 public class Bridge {
 	public static void main(String[] args) {
-
+		TV sonyOldRemote = new Sony(new OldRemote());
+		sonyOldRemote.on();
+		sonyOldRemote.off();
+		System.err.println();
+		
+		TV sonyNewRemote = new Sony(new NewRemote());
+		sonyNewRemote.on();
+		sonyNewRemote.off();
+		System.err.println();
+		
+		TV phillipsOldRemote = new Phillips(new OldRemote());
+		phillipsOldRemote.on();
+		phillipsOldRemote.off();
+		System.err.println();
+		
+		TV phillipsNewRemote = new Phillips(new NewRemote());
+		phillipsNewRemote.on();
+		phillipsNewRemote.off();
 	}
 }
